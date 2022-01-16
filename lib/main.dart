@@ -37,51 +37,39 @@ class _ExpenseState extends State<Expense> {
     });
   }
 
-  // void _startAddNewTransaction(BuildContext ctx) {
-  //   showModalBottomSheet(
-  //     context: ctx,
-  //     builder: (_) {
-  //       // return GestureDetector(
-  //       //   onTap: () {},
-  //         child: NewTransaction(_addNewTransaction),
-  //         // behavior: HitTestBehavior.opaque,
-  //       // );
-  //     },
-  //   );
-  // }
-
   void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
       context: ctx,
       builder: (_) {
-        return GestureDetector(
-          onTap: () {},
-          child: NewTransaction(_addNewTransaction),
-          behavior: HitTestBehavior.opaque,
-        );
+        // return GestureDetector(
+        //   onTap: () {},
+          child: NewTransaction(_addNewTransaction);
+          // behavior: HitTestBehavior.opaque,
+        // );
       },
     );
   }
-
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ShivExpenses',
       theme: ThemeData(
         primarySwatch: Colors.purple,
+       
         fontFamily: 'Quicksand',
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'expense app',
+            'Expense app',
           ),
           actions: [
             IconButton(
                 icon: Icon(Icons.add),
                 onPressed: () => _startAddNewTransaction(context)),
 
-            // onPressed: () {
+           // / onPressed: () {
             //   showModalBottomSheet(
             //     context: context,
             //     builder: (_) {
@@ -93,7 +81,7 @@ class _ExpenseState extends State<Expense> {
             //             mainAxisAlignment: MainAxisAlignment.center,
             //             mainAxisSize: MainAxisSize.min,
             //             children: <Widget>[
-            //               const Text('Modal BottomSheet'),
+            //               c/onst Text('Modal BottomSheet'),
             //               ElevatedButton(
             //                 child: const Text('Close BottomSheet'),
             //                 onPressed: () => Navigator.pop(context),
